@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sifat Salehin Ananyo | Electrical Engineer</title>
+<meta name="description" content="Portfolio of Sifat Salehin Ananyo, electrical engineer in design, projects and commissioning. Bollards, boom gates, access control, IoT and embedded projects.">
+<meta property="og:title" content="Sifat Salehin Ananyo | Electrical Engineer">
+<meta property="og:description" content="Design, projects and commissioning. Bollards, boom gates, IoT and embedded work.">
+<meta property="og:image" content="assets/img/bollard-diagram.webp">
+<meta name="theme-color" content="#F5F8F8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23121A2B'/%3E%3Crect x='6' y='17' width='20' height='4' rx='1' fill='%23FFC21A'/%3E%3Ccircle cx='8' cy='19' r='3' fill='%23E8402A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="top">
+  <div class="nav__in">
+    <a class="mark" href="#top" aria-label="Back to top">
+      <svg viewBox="0 0 40 24" aria-hidden="true"><rect x="1" y="9" width="10" height="14" rx="2"/><rect class="mark__arm" x="8" y="11" width="31" height="4" rx="1"/><circle cx="8" cy="13" r="2.4"/></svg>
+      <span>Ananyo</span>
+    </a>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<svg class="trace" id="trace" aria-hidden="true">
+  <path class="trace__ghost" id="traceGhost"/>
+  <path class="trace__live" id="traceLive"/>
+  <circle class="trace__head" id="traceHead" r="5"/>
+</svg>
+
+<main id="main">
+
+<!-- HERO: the drawing sheet -->
+<section class="hero" aria-labelledby="name">
+  <div class="wrap">
+    <h1 class="hero__name" id="name"><span>Sifat Salehin</span> <span>Ananyo</span></h1>
+
+    <div class="hero__grid">
+      <figure class="scene" aria-label="Animated line drawing: a car stops on the vehicle loop, the boom gate lifts, the bollards flash and lower, and the car drives through">
+        <svg viewBox="0 0 800 440" id="scene">
+          <defs>
+            <pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+              <line x1="0" y1="0" x2="0" y2="10" class="hatch-line"/>
+            </pattern>
+            <pattern id="stripes" width="40" height="16" patternUnits="userSpaceOnUse">
+              <rect width="40" height="16" fill="#fff"/>
+              <path d="M0 16 L12 0 H24 L12 16Z M20 16 L32 0 H44 L32 16Z" fill="#E8402A"/>
+            </pattern>
+            <linearGradient id="steel" x1="0" x2="1">
+              <stop offset="0" stop-color="#9AA6B2"/><stop offset=".35" stop-color="#E9EEF2"/><stop offset=".55" stop-color="#C5CED6"/><stop offset="1" stop-color="#7D8996"/>
+            </linearGradient>
+            <linearGradient id="cabinet" x1="0" x2="1">
+              <stop offset="0" stop-color="#FFD24D"/><stop offset=".6" stop-color="#FFC21A"/><stop offset="1" stop-color="#E9A800"/>
+            </linearGradient>
+            <clipPath id="clipScene"><rect x="0" y="0" width="800" height="440"/></clipPath>
+            <clipPath id="clipGround"><rect x="0" y="0" width="800" height="400"/></clipPath>
+          </defs>
+          <text class="sheet-note" x="790" y="22" text-anchor="end">Elevation, not to scale</text>
+
+          <!-- ground in section -->
+          <rect x="0" y="400" width="800" height="40" fill="url(#hatch)"/>
+          <line x1="0" y1="400" x2="800" y2="400" class="ground"/>
+
+          <!-- inductive loop cut into the slab -->
+          <g class="loop" id="loop">
+            <rect x="190" y="406" width="200" height="12" rx="3"/>
+            <path d="M190 412 h-30 v-6" class="loop__feed"/>
+          </g>
+
+          <!-- vehicle rolls onto the loop -->
+          <g clip-path="url(#clipScene)">
+            <g transform="translate(206 336)">
+              <g class="car">
+                <path class="car__body" d="M2 50 V36 Q3 29 14 27 L40 22 L62 5 Q66 1 74 1 H118 Q126 1 132 7 L150 24 L164 28 Q171 30 171 38 V50 Z"/>
+                <path class="car__glass" d="M69 9 L52 23 H95 V9Z M103 9 V23 H140 L125 9Z"/>
+                <line x1="99" y1="27" x2="99" y2="48" class="car__line"/>
+                <circle cx="38" cy="52" r="12" class="car__wheel"/><circle cx="38" cy="52" r="4" class="car__hub"/>
+                <circle cx="136" cy="52" r="12" class="car__wheel"/><circle cx="136" cy="52" r="4" class="car__hub"/>
+              </g>
+            </g>
+          </g>
+
+          <!-- arm rest post -->
+          <g class="post">
+            <rect x="434" y="306" width="12" height="94" rx="2"/>
+            <path d="M426 304 h28 v-8 h-6 v4 h-16 v-4 h-6z"/>
+          </g>
+
+          <!-- bollards -->
+          <g class="bollards" id="bollards" clip-path="url(#clipGround)">
+            <g transform="translate(540 0)"><rect class="b-plate" x="-6" y="394" width="46" height="6" rx="1"/><g class="b-move"><rect class="b-body" x="0" y="286" width="34" height="108" rx="5"/><rect class="b-cap" x="-2" y="280" width="38" height="10" rx="3"/><g class="b-leds"><circle cx="6" cy="297" r="2.6"/><circle cx="17" cy="297" r="2.6"/><circle cx="28" cy="297" r="2.6"/></g></g></g>
+            <g transform="translate(620 0)"><rect class="b-plate" x="-6" y="394" width="46" height="6" rx="1"/><g class="b-move"><rect class="b-body" x="0" y="286" width="34" height="108" rx="5"/><rect class="b-cap" x="-2" y="280" width="38" height="10" rx="3"/><g class="b-leds"><circle cx="6" cy="297" r="2.6"/><circle cx="17" cy="297" r="2.6"/><circle cx="28" cy="297" r="2.6"/></g></g></g>
+            <g transform="translate(700 0)"><rect class="b-plate" x="-6" y="394" width="46" height="6" rx="1"/><g class="b-move"><rect class="b-body" x="0" y="286" width="34" height="108" rx="5"/><rect class="b-cap" x="-2" y="280" width="38" height="10" rx="3"/><g class="b-leds"><circle cx="6" cy="297" r="2.6"/><circle cx="17" cy="297" r="2.6"/><circle cx="28" cy="297" r="2.6"/></g></g></g>
+          </g>
+
+          <!-- barrier arm, pivot at 130,300 -->
+          <g class="arm" id="arm">
+            <rect x="122" y="292" width="312" height="16" rx="3" fill="url(#stripes)" class="arm__bar"/>
+            <circle cx="428" cy="300" r="4.5" class="arm__lamp"/>
+          </g>
+
+          <!-- controller cabinet -->
+          <g class="cab" id="cab">
+            <rect x="70" y="266" width="96" height="134" rx="6" fill="url(#cabinet)" class="cab__box"/>
+            <rect x="82" y="318" width="72" height="70" rx="3" class="cab__door"/>
+            <circle cx="148" cy="330" r="2.5" class="cab__lock"/>
+            <circle cx="130" cy="300" r="11" class="cab__hub"/>
+            <circle cx="130" cy="300" r="3.5" class="cab__pin"/>
+            <circle cx="88" cy="282" r="5" class="cab__led" id="cabLed"/>
+          </g>
+
+          <!-- callouts -->
+          <g class="callouts">
+            <path d="M88 266 L60 226 H20"/><text x="20" y="218">Controller</text>
+            <path d="M300 418 L320 432 H390" /><text x="396" y="436">Inductive loop</text>
+            <path d="M716 280 L740 244 H790"/><text x="790" y="236" text-anchor="end">Bollards with LED ring</text>
+          </g>
+          <text class="arm-label" id="armLabel" x="300" y="284" text-anchor="middle">Barrier arm</text>
+        </svg>
+        <figcaption>Fig. 1, a normal day at work, running on a loop.</figcaption>
+      </figure>
+
+      <div class="hero__side">
+        <p class="hero__lede">Electrical engineer in design, projects and commissioning. I draw the schematics, wire the cabinets and stand on site when the gate goes up for the first time.</p>
+        <div class="cta">
+          <a class="btn btn--solid" href="#work">See my work</a>
+          <a class="btn" href="https://www.linkedin.com/in/sifat-salehin-ananyo" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <dl class="tblock tblock--hero">
+          <div><dt>Role</dt><dd>Electrical Engineer</dd></div>
+          <div><dt>Company</dt><dd>Australian Bollard (NJM Group)</dd></div>
+          <div><dt>Based</dt><dd>Melbourne, VIC</dd></div>
+          <div><dt>Status</dt><dd><i class="led led--on" aria-hidden="true"></i> Online</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec" id="about" aria-labelledby="about-h">
+  <div class="wrap">
+    <span class="node" aria-hidden="true"></span>
+    <h2 id="about-h">Hardware, software and the site in between</h2>
+    <div class="about">
+      <div class="about__text">
+        <p>I like the whole job. Drawing the schematic, wiring the cabinet, writing the bit of code that ties it together, then standing on site with the client while it runs for the first time.</p>
+        <p>At Australian Bollard I design, install and commission bollards, boom gates and tyre shredders, and connect them to CCTV, networks and access control. I also coordinate the people around each job, train clients and contractors on site, and help the sales and IT teams when they need an engineer.</p>
+        <p>Outside work I build with ESP32s, run my own home servers and teach kids how electronics and code fit together.</p>
+      </div>
+      <div class="plate" role="group" aria-label="Nameplate">
+        <span class="rivet r1"></span><span class="rivet r2"></span><span class="rivet r3"></span><span class="rivet r4"></span>
+        <p class="plate__brand">Ananyo <small>Model SSA-26</small></p>
+        <dl>
+          <div><dt>Type</dt><dd>Electrical engineer</dd></div>
+          <div><dt>Duty</dt><dd>Design, projects, commissioning</dd></div>
+          <div><dt>Field record</dt><dd>20+ larger projects delivered</dd></div>
+          <div><dt>Code</dt><dd>C++, Python, MATLAB</dd></div>
+          <div><dt>On the bench</dt><dd>LPR to boom gate integration</dd></div>
+          <div><dt>Location</dt><dd>Melbourne, VIC. Portable unit, open to relocation</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS: DIN rail -->
+<section class="sec" id="skills" aria-labelledby="skills-h">
+  <div class="wrap">
+    <span class="node" aria-hidden="true"></span>
+    <h2 id="skills-h">What I work with</h2>
+    <p class="sec__intro">Grouped the way I'd lay out a switchboard. Each module lights up when it's in view.</p>
+    <div class="rail">
+      <div class="mod mod--3">
+        <div class="mod__head"><i class="led" aria-hidden="true"></i><h3>Field and commissioning</h3></div>
+        <ul><li>Bollards, boom gates and tyre shredders</li><li>Low-voltage motors and controllers</li><li>Inductive and wireless vehicle loops</li><li>IR beams, through-beam and retro-reflective</li><li>Force detection on boom gates</li><li>Relay logic (NO, COM, NC)</li><li>Fault finding on site</li></ul>
+      </div>
+      <div class="mod mod--2">
+        <div class="mod__head"><i class="led" aria-hidden="true"></i><h3>Design and documentation</h3></div>
+        <ul><li>EPLAN Electric P8</li><li>AutoCAD</li><li>Schematics and wiring diagrams</li><li>FEA for test structures</li><li>Commissioning and handover docs</li></ul>
+      </div>
+      <div class="mod mod--1">
+        <div class="mod__head"><i class="led" aria-hidden="true"></i><h3>Integration</h3></div>
+        <ul><li>CCTV</li><li>IP networks</li><li>Access control</li><li>LPR, in progress</li></ul>
+      </div>
+      <div class="mod mod--2">
+        <div class="mod__head"><i class="led" aria-hidden="true"></i><h3>IoT and embedded</h3></div>
+        <ul><li>ESP32 and STM32</li><li>Raspberry Pi and Arduino</li><li>Sensors and data logging</li><li>VHDL on FPGA</li><li>Wireless sensor links</li></ul>
+      </div>
+      <div class="mod mod--2">
+        <div class="mod__head"><i class="led" aria-hidden="true"></i><h3>Software</h3></div>
+        <ul><li>C and C++</li><li>Python</li><li>MATLAB and LabVIEW</li><li>HTML, CSS and JavaScript</li><li>Machine vision basics</li></ul>
+      </div>
+      <div class="mod mod--1">
+        <div class="mod__head"><i class="led" aria-hidden="true"></i><h3>Servers</h3></div>
+        <ul><li>Linux</li><li>Docker</li><li>NAS and VPN</li></ul>
+      </div>
+      <div class="mod mod--1">
+        <div class="mod__head"><i class="led" aria-hidden="true"></i><h3>Simulation</h3></div>
+        <ul><li>PowerWorld</li><li>MATLAB</li><li>ModelSim</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK: drawing sheets -->
+<section class="sec" id="work" aria-labelledby="work-h">
+  <div class="wrap">
+    <span class="node" aria-hidden="true"></span>
+    <h2 id="work-h">Selected work</h2>
+    <p class="sec__intro">Each project is set out like a drawing sheet. Tap a thumbnail to swap the picture, or the picture to see it bigger.</p>
+
+    <div class="sheets">
+
+      <article class="sheet sheet--wide">
+        <div class="gallery">
+          <button class="gallery__main" type="button" aria-label="Enlarge picture"><img src="assets/img/bollard-diagram.webp" alt="Block diagram of the bollard duty-cycle test system: ESP32, STM32, relay module, sensors and bollard controller" width="1400" height="1050" loading="lazy"></button>
+          <div class="gallery__thumbs">
+            <button type="button" aria-pressed="true"><img src="assets/img/bollard-diagram.webp" alt="Block diagram of the bollard duty-cycle test system: ESP32, STM32, relay module, sensors and bollard controller" loading="lazy"></button>
+            <button type="button"><img src="assets/img/bollard-dashboard.webp" alt="Live web dashboard showing heavy-duty and light-duty bollard cycle counts and temperature trend" loading="lazy"></button>
+            <button type="button"><img src="assets/img/bollard-log.webp" alt="Event log from the test system listing cycles and temperature readings" loading="lazy"></button>
+          </div>
+        </div>
+        <div class="sheet__body">
+          <h3>Bollard test rig</h3>
+          <p>A rig to prove our bollards before they go in the ground. I designed the structural frame for static load testing of marine bollards, checked the member sizes with FEA and prepared the fabrication and assembly drawings.</p>
+          <p>On top of that sits an automated duty-cycle tester. An ESP32 runs the test sequence and a live web dashboard, an STM32 reads the sensors, and a relay module drives the bollard controller. It counts every up and down cycle, watches position, motor current, supply voltage and core temperature, and logs it all to flash.</p>
+          <ul class="tags"><li>FEA</li><li>Fabrication drawings</li><li>ESP32</li><li>STM32</li><li>Relay control</li><li>Web dashboard</li></ul>
+        </div>
+        <dl class="tblock">
+          <div><dt>Dwg no.</dt><dd>SSA-101</dd></div>
+          <div><dt>Context</dt><dd>Australian Bollard</dd></div>
+          <div><dt>Discipline</dt><dd>Test and measurement</dd></div>
+          <div><dt>Sheet</dt><dd>1 of 9</dd></div>
+        </dl>
+      </article>
+
+      <article class="sheet sheet--wide sheet--flip">
+        <div class="gallery">
+          <button class="gallery__main" type="button" aria-label="Enlarge picture"><img src="assets/img/dash-poster.webp" alt="Project poster for the car dashboard: the problem, the process and the final instrument cluster" width="1211" height="1400" loading="lazy"></button>
+          <div class="gallery__thumbs">
+            <button type="button" aria-pressed="true"><img src="assets/img/dash-poster.webp" alt="Project poster for the car dashboard: the problem, the process and the final instrument cluster" loading="lazy"></button>
+            <button type="button"><img src="assets/img/dash-ui.webp" alt="Dashboard screen with menu, turn-by-turn navigation and speed and rev gauges" loading="lazy"></button>
+            <button type="button"><img src="assets/img/dash-gauge.gif" alt="Animated gauge needle sweeping on the test build" loading="lazy"></button>
+            <button type="button"><img src="assets/img/dash-code.webp" alt="C++ source code for the dashboard in the editor" loading="lazy"></button>
+            <button type="button"><img src="assets/img/dash-survey.webp" alt="Results page of the public survey used to choose the cluster layout" loading="lazy"></button>
+          </div>
+        </div>
+        <div class="sheet__body">
+          <h3>Universal car dashboard</h3>
+          <p>A modular instrument cluster that can go into almost any light vehicle and still meet Australian standards. We wrote it in C++ on a Raspberry Pi 5, with gauges, navigation prompts and warning lights on one screen.</p>
+          <p>Before locking in the design we ran a public survey to find the cluster layout drivers found easiest to read, then built the final version around the results.</p>
+          <ul class="tags"><li>Raspberry Pi 5</li><li>C++</li><li>Interface design</li><li>User survey</li></ul>
+        </div>
+        <dl class="tblock">
+          <div><dt>Dwg no.</dt><dd>SSA-102</dd></div>
+          <div><dt>Context</dt><dd>Final year project</dd></div>
+          <div><dt>Discipline</dt><dd>Automotive electronics</dd></div>
+          <div><dt>Sheet</dt><dd>2 of 9</dd></div>
+        </dl>
+      </article>
+
+      <div class="sheets__pair">
+        <article class="sheet">
+          <div class="gallery">
+            <button class="gallery__main" type="button" aria-label="Enlarge picture"><img src="assets/img/robot-build.webp" alt="The LEGO robot on the competition floor with its gripper and sensors" width="1050" height="1400" loading="lazy"></button>
+            <div class="gallery__thumbs">
+              <button type="button" aria-pressed="true"><img src="assets/img/robot-build.webp" alt="The LEGO robot on the competition floor with its gripper and sensors" loading="lazy"></button>
+              <button type="button"><img src="assets/img/robot-team.webp" alt="The team holding the robot after finishing runners up" loading="lazy"></button>
+            </div>
+          </div>
+          <div class="sheet__body">
+            <h3>Autonomous sorting robot</h3>
+            <p>A robot that finds objects by colour, picks them up, sorts them and drops each one at its target with nobody driving it. LEGO chassis, control logic in MATLAB, and sensors read in real time through an NI myDAQ. Our design and code were the most efficient in the competition and we finished runners up.</p>
+            <ul class="tags"><li>MATLAB</li><li>NI myDAQ</li><li>Colour sensing</li><li>Runners up</li></ul>
+          </div>
+          <dl class="tblock">
+            <div><dt>Dwg no.</dt><dd>SSA-103</dd></div>
+            <div><dt>Context</dt><dd>Uni competition</dd></div>
+            <div><dt>Sheet</dt><dd>3 of 9</dd></div>
+          </dl>
+        </article>
+
+        <article class="sheet">
+          <div class="gallery">
+            <button class="gallery__main" type="button" aria-label="Enlarge picture"><img src="assets/img/telehealth-bench.webp" alt="Bench setup with laptop, monitors and test hardware for the telehealth project" width="1400" height="1050" loading="lazy"></button>
+            <div class="gallery__thumbs">
+              <button type="button" aria-pressed="true"><img src="assets/img/telehealth-bench.webp" alt="Bench setup with laptop, monitors and test hardware for the telehealth project" loading="lazy"></button>
+              <button type="button"><img src="assets/img/telehealth-labview.webp" alt="LabVIEW block diagram of the two-way voice link over TCP" loading="lazy"></button>
+            </div>
+          </div>
+          <div class="sheet__body">
+            <h3>Remote telehealth and equipment control</h3>
+            <p>A link that lets a clinician talk to a patient and run equipment from another room. I built a two-way voice channel in LabVIEW over TCP, capturing sound on one machine and playing it back on the other, alongside remote control of the hardware on the bench.</p>
+            <ul class="tags"><li>LabVIEW</li><li>TCP networking</li><li>Audio streaming</li><li>Remote control</li></ul>
+          </div>
+          <dl class="tblock">
+            <div><dt>Dwg no.</dt><dd>SSA-104</dd></div>
+            <div><dt>Context</dt><dd>Uni project</dd></div>
+            <div><dt>Sheet</dt><dd>4 of 9</dd></div>
+          </dl>
+        </article>
+
+        <article class="sheet">
+          <div class="gallery">
+            <button class="gallery__main" type="button" aria-label="Enlarge picture"><img src="assets/img/esp32-board.webp" alt="ESP32 development board powered up on the desk" width="1400" height="791" loading="lazy"></button>
+            <div class="gallery__thumbs">
+              <button type="button" aria-pressed="true"><img src="assets/img/esp32-board.webp" alt="ESP32 development board powered up on the desk" loading="lazy"></button>
+              <button type="button"><img src="assets/img/esp32-code.webp" alt="Arduino IDE with the ESP32 control code" loading="lazy"></button>
+            </div>
+          </div>
+          <div class="sheet__body">
+            <h3>ESP32 smart home</h3>
+            <p>My own home automation, coded from scratch. ESP32 nodes around the house handle sensors and switching and connect to Google Home for voice control. I used the same approach to build an automated gate controller.</p>
+            <ul class="tags"><li>ESP32</li><li>C++</li><li>Google Home</li><li>Wi-Fi</li></ul>
+          </div>
+          <dl class="tblock">
+            <div><dt>Dwg no.</dt><dd>SSA-105</dd></div>
+            <div><dt>Context</dt><dd>Personal</dd></div>
+            <div><dt>Sheet</dt><dd>5 of 9</dd></div>
+          </dl>
+        </article>
+
+        <article class="sheet">
+          <div class="gallery">
+            <button class="gallery__main" type="button" aria-label="Enlarge picture"><img src="assets/img/fpga-bench.webp" alt="Lab bench with oscilloscope, multimeter and the FPGA board" width="1400" height="1050" loading="lazy"></button>
+            <div class="gallery__thumbs">
+              <button type="button" aria-pressed="true"><img src="assets/img/fpga-bench.webp" alt="Lab bench with oscilloscope, multimeter and the FPGA board" loading="lazy"></button>
+              <button type="button"><img src="assets/img/fpga-fsm.webp" alt="Hand-drawn state machine for the traffic light controller" loading="lazy"></button>
+              <button type="button"><img src="assets/img/fpga-vhdl.webp" alt="VHDL code for the traffic light entity" loading="lazy"></button>
+              <button type="button"><img src="assets/img/fpga-synth.webp" alt="Xilinx project status report after synthesis" loading="lazy"></button>
+              <button type="button"><img src="assets/img/fpga-wiring.webp" alt="Board wiring with a multimeter measuring on the bench" loading="lazy"></button>
+            </div>
+          </div>
+          <div class="sheet__body">
+            <h3>Embedded and FPGA labs</h3>
+            <p>Digital design on Swinburne's custom FPGA board. I wrote VHDL in AMD Xilinx tools, simulated it in ModelSim and tested it on the bench with a scope and meter. One favourite was a traffic light controller, sketched by hand as a state machine first and then coded.</p>
+            <ul class="tags"><li>VHDL</li><li>AMD Xilinx</li><li>ModelSim</li><li>State machines</li></ul>
+          </div>
+          <dl class="tblock">
+            <div><dt>Dwg no.</dt><dd>SSA-106</dd></div>
+            <div><dt>Context</dt><dd>Swinburne</dd></div>
+            <div><dt>Sheet</dt><dd>6 of 9</dd></div>
+          </dl>
+        </article>
+      </div>
+
+      <div class="sheets__trio">
+        <article class="sheet sheet--small">
+          <svg class="sketch" viewBox="0 0 320 180" role="img" aria-label="Sketch of two home servers, a NAS and a Docker host, behind a router">
+            <rect x="40" y="40" width="120" height="34" rx="4" class="sk-box"/><circle cx="56" cy="57" r="4" class="sk-led sk-led--g"/><line x1="72" y1="52" x2="140" y2="52" class="sk-thin"/><line x1="72" y1="62" x2="128" y2="62" class="sk-thin"/>
+            <rect x="40" y="86" width="120" height="34" rx="4" class="sk-box"/><circle cx="56" cy="103" r="4" class="sk-led sk-led--g"/><line x1="72" y1="98" x2="140" y2="98" class="sk-thin"/><line x1="72" y1="108" x2="118" y2="108" class="sk-thin"/>
+            <text x="168" y="61" class="sk-t">NAS storage</text><text x="168" y="107" class="sk-t">Docker host</text>
+            <path d="M100 120 V150 H250 V128" class="sk-wire"/><rect x="226" y="108" width="48" height="20" rx="3" class="sk-box"/><text x="250" y="122" class="sk-t" text-anchor="middle">VPN</text>
+          </svg>
+          <div class="sheet__body">
+            <h3>Home server</h3>
+            <p>I wanted my files and photos back under my own roof. Old hardware became two servers: a NAS for storage and an Ubuntu Server Docker host for streaming, VPN access and the smart home. It replaces Google Drive, Photos and Dropbox for me.</p>
+            <ul class="tags"><li>Ubuntu Server</li><li>Docker</li><li>NAS</li><li>VPN</li></ul>
+          </div>
+          <dl class="tblock"><div><dt>Dwg no.</dt><dd>SSA-107</dd></div><div><dt>Sheet</dt><dd>7 of 9</dd></div></dl>
+        </article>
+
+        <article class="sheet sheet--small">
+          <svg class="sketch" viewBox="0 0 320 180" role="img" aria-label="Sketch of a CubeSat sending sensor data from one ESP32 to another on a laptop dashboard">
+            <g transform="translate(40 44)"><path d="M0 18 L36 0 L72 18 L36 36Z" class="sk-box sk-top"/><path d="M0 18 V70 L36 88 V36Z" class="sk-box"/><path d="M72 18 V70 L36 88 V36Z" class="sk-box sk-side"/><circle cx="18" cy="48" r="5" class="sk-led sk-led--r"/></g>
+            <path d="M130 84 q20 -18 40 0 q20 18 40 0" class="sk-wave"/>
+            <rect x="216" y="56" width="74" height="50" rx="4" class="sk-box"/><polyline points="224,96 238,84 250,90 264,70 282,78" class="sk-wire"/><path d="M206 112 H300 L292 120 H214Z" class="sk-box"/>
+            <text x="76" y="156" class="sk-t" text-anchor="middle">Sensors + ESP32</text><text x="253" y="140" class="sk-t" text-anchor="middle">Live dashboard</text>
+          </svg>
+          <div class="sheet__body">
+            <h3>CubeSat builds with students</h3>
+            <p>At MiT my students and I build model CubeSats. Sensors on board send readings through an ESP32 to a second ESP32 on a laptop, which shows everything on a live dashboard. Sensors, radio and code in one project.</p>
+            <ul class="tags"><li>ESP32</li><li>Sensors</li><li>Wireless link</li><li>Teaching</li></ul>
+          </div>
+          <dl class="tblock"><div><dt>Dwg no.</dt><dd>SSA-108</dd></div><div><dt>Sheet</dt><dd>8 of 9</dd></div></dl>
+        </article>
+
+        <article class="sheet sheet--small">
+          <svg class="sketch" viewBox="0 0 320 180" role="img" aria-label="Sketch of a play button over a circuit board, for the club's YouTube channel">
+            <rect x="70" y="30" width="180" height="110" rx="10" class="sk-box"/>
+            <path d="M90 60 H130 L140 70 H170 M90 110 H120 L130 100 H175 M230 50 V80 L215 95 M230 120 H200" class="sk-wire"/>
+            <circle cx="130" cy="60" r="0" /><circle cx="175" cy="100" r="4" class="sk-pad"/><circle cx="170" cy="70" r="4" class="sk-pad"/><circle cx="215" cy="95" r="4" class="sk-pad"/><circle cx="200" cy="120" r="4" class="sk-pad"/>
+            <circle cx="160" cy="85" r="24" class="sk-play"/><path d="M152 73 L172 85 L152 97Z" fill="#fff"/>
+            <text x="160" y="166" class="sk-t" text-anchor="middle">IoT and AI Club</text>
+          </svg>
+          <div class="sheet__body">
+            <h3>Swinburne IoT and AI Club</h3>
+            <p>I started the club with a friend to share what we were learning and build projects together. COVID cut a lot of our plans short, but we kept going online and ran a YouTube channel.</p>
+            <a class="link" href="https://www.youtube.com/@swinburneiotandaiclub1170" target="_blank" rel="noopener">Watch the channel on YouTube</a>
+          </div>
+          <dl class="tblock"><div><dt>Dwg no.</dt><dd>SSA-109</dd></div><div><dt>Sheet</dt><dd>9 of 9</dd></div></dl>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE: single line diagram -->
+<section class="sec" id="experience" aria-labelledby="exp-h">
+  <div class="wrap">
+    <span class="node" aria-hidden="true"></span>
+    <h2 id="exp-h">Where I've worked</h2>
+    <p class="sec__intro">Drawn as a single-line diagram, newest at the top.</p>
+    <ol class="sld">
+      <li class="feeder feeder--live">
+        <span class="cb" aria-hidden="true"></span>
+        <div class="feeder__load">
+          <p class="feeder__when">Oct 2024 to now</p>
+          <h3>Electrical Engineer, design, projects and commissioning</h3>
+          <p class="feeder__org">Australian Bollard (NJM Group), Heidelberg West VIC</p>
+          <ul>
+            <li>Install and commission bollards, boom gates and tyre shredders, including loops, IR beams and force sensing.</li>
+            <li>Draw schematics and wiring documentation in EPLAN.</li>
+            <li>Coordinate clients, builders and contractors across 20+ larger projects.</li>
+            <li>Integrate sites with CCTV, IP networks and access control.</li>
+            <li>Train clients and contractors on site, and support sales, tenders and the IT team.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="feeder feeder--live">
+        <span class="cb" aria-hidden="true"></span>
+        <div class="feeder__load">
+          <p class="feeder__when">Nov 2025 to now, casual</p>
+          <h3>Coding and Robotics Instructor</h3>
+          <p class="feeder__org">MiT</p>
+          <ul>
+            <li>Teach kids electronics, coding and robotics on nights and weekends.</li>
+            <li>Run CubeSat builds where students stream sensor data to a live dashboard.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="feeder">
+        <span class="cb" aria-hidden="true"></span>
+        <div class="feeder__load">
+          <p class="feeder__when">Mar 2020 to Oct 2024</p>
+          <h3>Maintenance Supervisor</h3>
+          <p class="feeder__org">V/Line</p>
+          <ul>
+            <li>Supervised a team of four in a live train yard, including the diesel fuelling facility.</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="sec" id="education" aria-labelledby="edu-h">
+  <div class="wrap">
+    <span class="node" aria-hidden="true"></span>
+    <h2 id="edu-h">Study and tickets</h2>
+    <div class="edu">
+      <div class="edu__deg">
+        <h3>Bachelor of Engineering, Electrical and Electronics</h3>
+        <p>Swinburne University of Technology, 2018 to 2024</p>
+        <p>Engineers Australia member, working towards Chartered status.</p>
+      </div>
+      <ul class="strip" aria-label="Site cards">
+        <li><span class="screw" aria-hidden="true"></span>White Card</li>
+        <li><span class="screw" aria-hidden="true"></span>RIW card</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec sec--contact" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <span class="node node--end" aria-hidden="true"></span>
+    <h2 id="contact-h">Got a site to commission or a system to design?</h2>
+    <p class="sec__intro">I'm always happy to talk shop. LinkedIn is the quickest way to reach me.</p>
+    <div class="cta">
+      <a class="btn btn--solid btn--big" href="https://www.linkedin.com/in/sifat-salehin-ananyo" target="_blank" rel="noopener">Message me on LinkedIn</a>
+      <!-- To show an email button, uncomment the next line and put your address in both places:
+      <a class="btn btn--big" href="mailto:you@example.com">you@example.com</a> -->
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <dl class="tblock tblock--foot">
+      <div><dt>Drawn by</dt><dd>Sifat Salehin Ananyo</dd></div>
+      <div><dt>Title</dt><dd>Portfolio</dd></div>
+      <div><dt>Scale</dt><dd>NTS</dd></div>
+      <div><dt>Rev</dt><dd>C, <span id="year">2026</span></dd></div>
+    </dl>
+  </div>
+</footer>
+
+<dialog class="lb" id="lb" aria-label="Enlarged picture">
+  <button class="lb__close" type="button" aria-label="Close">Close</button>
+  <img alt="">
+  <p class="lb__cap"></p>
+</dialog>
+
+<script src="main.js"></script>
+</body>
+</html>
